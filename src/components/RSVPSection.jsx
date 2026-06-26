@@ -15,10 +15,19 @@ const INITIAL = {
 };
 
 async function submitRSVP(payload) {
-  // Structured so a Firebase / API integration can drop in later.
-  // e.g. await addDoc(collection(db, 'rsvps'), { ...payload, createdAt: serverTimestamp() })
-  console.log('[RSVP submission]', payload);
-  return new Promise((resolve) => setTimeout(resolve, 600));
+  const endpoint = import.meta.env.VITE_RSVP_ENDPOINT;
+  if (!endpoint) {
+    console.warn('[RSVP] VITE_RSVP_ENDPOINT not set — logging payload instead.', payload);
+    return new Promise((resolve) => setTimeout(resolve, 400));
+  }
+  // Apps Script Web Apps don't return CORS headers, so we fire-and-forget with no-cors.
+  // text/plain avoids a CORS preflight; Apps Script reads e.postData.contents.
+  await fetch(endpoint, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  });
 }
 
 export default function RSVPSection() {

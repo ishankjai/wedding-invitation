@@ -55,7 +55,7 @@ export default function IntroVideo({ onComplete }) {
         poster="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80"
         onError={() => setError(true)}
       >
-        <source src="/assets/intro1.mp4" type="video/mp4" />
+        <source src="/assets/intro.mp4" type="video/mp4" />
       </video>
 
       {error && (

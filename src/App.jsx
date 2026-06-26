@@ -7,7 +7,6 @@ import ScratchReveal from './components/ScratchReveal.jsx';
 import CountdownSection from './components/CountdownSection.jsx';
 import StorySection from './components/StorySection.jsx';
 import EventSection from './components/EventSection.jsx';
-import VenueSection from './components/VenueSection.jsx';
 import GallerySection from './components/GallerySection.jsx';
 import RSVPSection from './components/RSVPSection.jsx';
 import Footer from './components/Footer.jsx';
@@ -51,7 +50,6 @@ export default function App() {
           <CountdownSection unlocked={scratchUnlocked} />
           <StorySection />
           <EventSection />
-          <VenueSection />
           <GallerySection />
           <RSVPSection />
           <Footer />

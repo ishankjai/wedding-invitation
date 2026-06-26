@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FiNavigation } from 'react-icons/fi';
 import { weddingData } from '../data/weddingData.js';
 import '../styles/events.css';
 
@@ -75,6 +76,16 @@ export default function EventSection() {
                   <span className="value">{e.venue}</span>
                 </div>
               </div>
+              {e.directionsUrl && (
+                <a
+                  className="event-directions"
+                  href={e.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FiNavigation /> Get Directions
+                </a>
+              )}
             </article>
           ))}
         </div>
