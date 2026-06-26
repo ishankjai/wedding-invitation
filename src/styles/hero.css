@@ -1,0 +1,181 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px 140px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.18), transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(186, 122, 118, 0.16), transparent 55%),
+    linear-gradient(180deg, #fbf6ec, #f4e9d4);
+}
+
+.hero-frame {
+  position: absolute;
+  inset: 32px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 18px;
+  pointer-events: none;
+}
+.hero-frame::before,
+.hero-frame::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--gold);
+  opacity: 0.7;
+}
+.hero-frame::before { top: -10px; left: -10px; border-right: none; border-bottom: none; }
+.hero-frame::after { bottom: -10px; right: -10px; border-left: none; border-top: none; }
+
+.hero-inner {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero-blessing {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.6vw, 1.55rem);
+  color: var(--deep);
+  letter-spacing: 0.05em;
+  margin-bottom: 36px;
+}
+
+.hero-invite-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-soft);
+  max-width: 640px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.hero-names {
+  font-family: var(--font-serif);
+  color: var(--deep);
+  line-height: 1;
+  margin: 16px 0 22px;
+}
+.hero-name {
+  font-size: clamp(3.2rem, 9vw, 6.4rem);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  display: block;
+}
+.hero-amp {
+  display: block;
+  font-family: var(--font-script);
+  color: var(--gold);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  margin: 6px 0;
+  line-height: 1;
+}
+
+.hero-parents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 48px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-parent {
+  padding: 18px 20px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(2px);
+}
+.hero-parent .label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: block;
+}
+.hero-parent .names {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--text);
+  font-style: italic;
+}
+
+.hero-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 44px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  color: var(--deep);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.hero-date strong { color: var(--gold); font-weight: 500; }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-soft);
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  z-index: 6;
+}
+.scroll-mouse {
+  width: 22px;
+  height: 36px;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  margin: 10px auto 0;
+  position: relative;
+}
+.scroll-mouse::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 3px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--gold);
+  transform: translateX(-50%);
+  animation: scrollDot 1.6s ease-in-out infinite;
+}
+@keyframes scrollDot {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 14px); opacity: 0; }
+}
+
+.petal {
+  position: absolute;
+  top: -50px;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  opacity: 0.65;
+  z-index: 3;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 80px 18px 120px; }
+  .hero-frame { inset: 16px; }
+  .hero-parents { grid-template-columns: 1fr; gap: 14px; margin-top: 34px; }
+}

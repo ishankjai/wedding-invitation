@@ -1,0 +1,103 @@
+.events-section {
+  background:
+    radial-gradient(900px 500px at 50% 0%, rgba(212, 175, 55, 0.10), transparent 60%),
+    var(--cream);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.event-card {
+  position: relative;
+  padding: 38px 28px 32px;
+  background: linear-gradient(180deg, #fffdf8, #faf1e1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.event-card::before,
+.event-card::after {
+  content: '';
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--gold);
+  opacity: 0.55;
+}
+.event-card::before { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+.event-card::after { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-deep);
+}
+
+.event-icon {
+  font-size: 1.6rem;
+  color: var(--gold);
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.event-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--deep);
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+.event-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--rose);
+  margin-bottom: 22px;
+}
+
+.event-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 0 auto 22px;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-sans);
+  color: var(--text);
+}
+
+.event-details .row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.event-details .row .label {
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.event-details .row .value {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .events-grid { gap: 18px; }
+  .event-card { padding: 32px 22px 26px; }
+}

@@ -1,0 +1,112 @@
+.rsvp-section {
+  background:
+    radial-gradient(700px 400px at 50% 100%, rgba(212, 175, 55, 0.12), transparent 60%),
+    var(--cream);
+}
+
+.rsvp-card {
+  margin: 50px auto 0;
+  max-width: 760px;
+  padding: 56px 48px;
+  background: linear-gradient(180deg, #fffdf8, #faf1e1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.rsvp-card::before,
+.rsvp-card::after {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--gold);
+  opacity: 0.55;
+}
+.rsvp-card::before { top: 14px; left: 14px; border-right: none; border-bottom: none; }
+.rsvp-card::after { bottom: 14px; right: 14px; border-left: none; border-top: none; }
+
+.rsvp-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 22px;
+}
+
+.rsvp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rsvp-field.full { grid-column: 1 / -1; }
+
+.rsvp-field label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.rsvp-field input,
+.rsvp-field select,
+.rsvp-field textarea {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(138, 79, 76, 0.25);
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.rsvp-field input:focus,
+.rsvp-field select:focus,
+.rsvp-field textarea:focus {
+  border-color: var(--gold);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+}
+
+.rsvp-field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.rsvp-submit-row {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.rsvp-success {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px dashed var(--gold);
+  color: var(--deep);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.rsvp-error {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--rose);
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .rsvp-card { padding: 40px 22px; }
+  .rsvp-form { grid-template-columns: 1fr; }
+}
