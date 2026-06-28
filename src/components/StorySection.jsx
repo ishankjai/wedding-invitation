@@ -46,7 +46,7 @@ export default function StorySection() {
       <div className="section-inner">
         <div className="section-heading">
           <span className="eyebrow">Our Journey</span>
-          <h2 className="section-title">A Love Story in Five Frames</h2>
+          <h2 className="section-title">Five Moments. One Forever.</h2>
           <div className="divider">✦</div>
           <p className="section-sub">
             Every great story begins quietly — ours did too. Here are the moments that wrote us into forever.

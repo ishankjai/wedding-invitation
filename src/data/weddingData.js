@@ -29,43 +29,43 @@ export const weddingData = {
   story: [
     {
       id: 1,
-      title: 'The First Hello',
-      date: 'Spring · 2021',
-      description:
-        'A quiet evening, a shared smile, and a hello that quietly changed everything. Two strangers crossed paths, and the world felt a little softer.',
-      image: '/assets/images/1.jpeg'
+      title: "Where It All Began",
+      date: "The First Chapter",
+      // description:
+      //   "What started with a simple conversation soon turned into endless laughter and genuine companionship. Somewhere between the smiles, we found a love that felt beautifully effortless.",
+      image: "/assets/images/1.jpeg"
     },
     {
       id: 2,
-      title: 'The Long Conversations',
-      date: 'Summer · 2022',
-      description:
-        'Hours felt like minutes. From the silliest jokes to the deepest dreams — every conversation became a new chapter we never wanted to end.',
-      image: '/assets/images/4.jpeg'
+      title: "Blessed Together",
+      date: "Love & Faith",
+      // description:
+      //   "Hand in hand, we sought blessings for our journey. Every prayer, every peaceful moment, and every shared belief made our bond stronger than ever.",
+      image: "/assets/images/3.jpeg"
     },
     {
       id: 3,
-      title: 'The Proposal',
-      date: 'Winter · 2025',
-      description:
-        'Under a sky full of stars and a heart full of promises, the question was asked and answered in the same breath — Yes, forever.',
-      image: '/assets/images/7.jpeg'
+      title: "Everyday Adventures",
+      date: "Making Memories",
+      // description:
+      //   "From spontaneous outings to carefree afternoons, we discovered that the happiest moments aren't planned—they're simply spent together.",
+      image: "/assets/images/4.jpeg"
     },
     {
       id: 4,
-      title: 'The Promise',
-      date: 'Spring · 2026',
-      description:
-        'Two families became one. With folded hands and grateful hearts, our blessings turned into a sacred promise of forever.',
-      image: '/assets/images/3.jpeg'
+      title: "Dreaming Together",
+      date: "Looking Ahead",
+      // description:
+      //   "Life gave us countless reasons to celebrate. Dressed in our best, surrounded by joy, we created memories that we'll cherish for a lifetime.",
+      image: "/assets/images/7.jpeg"
     },
     {
       id: 5,
-      title: 'Forever Begins',
-      date: 'January · 2027',
-      description:
-        'And so, we step into a new beginning — hand in hand, hearts entwined — to write the rest of our story together.',
-      image: '/assets/images/6.jpeg'
+      title: "Forever Awaits",
+      date: "The Next Chapter",
+      // description:
+      //   "Looking toward the horizon with hearts full of dreams, we're ready to begin our greatest adventure yet—walking hand in hand into a lifetime of love.",
+      image: "/assets/images/5.jpeg"
     }
   ],
   events: [
@@ -126,12 +126,10 @@ export const weddingData = {
     }
   ],
   gallery: [
-    '/assets/images/5.jpeg',
+    '/assets/images/11.jpeg',
     '/assets/images/8.jpeg',
     '/assets/images/9.jpeg',
-    '/assets/images/11.jpeg',
     '/assets/images/12.jpeg',
-    '/assets/images/14.jpeg'
   ],
   footer: {
     thankYou: 'Thank you for being part of our journey',
