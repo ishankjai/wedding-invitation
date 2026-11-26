@@ -16,7 +16,7 @@ export const weddingData = {
   date: {
     full: '26 January 2027',
     day: 'Tuesday',
-    iso: '2027-01-26T11:00:00',
+    iso: '2027-01-26T00:00:00',
     parts: {
       month: 'JANUARY',
       day: '26',
